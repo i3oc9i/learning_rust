@@ -1,0 +1,29 @@
+[package]
+name = "my_learning"
+version = "0.1.0"
+description = "my learning playground"
+edition = "2021"
+authors = ["i3oc9i <ivano.coltellacci@gmail.com>"]
+
+[dependencies]
+
+[[example]]
+name = "lp_01_01"
+path = "01_basic/01_ex/main.rs"
+
+[[example]]
+name = "lp_01_02"
+path = "01_basic/02_ex/main.rs"
+
+[[example]]
+name = "lp_01_03"
+path = "01_basic/03_ex/main.rs"
+
+[[example]]
+name = "lp_01_04"
+path = "01_basic/04_ex/main.rs"
+
+[[example]]
+name = "lp_01_05"
+path = "01_basic/05_ex/main.rs"
+

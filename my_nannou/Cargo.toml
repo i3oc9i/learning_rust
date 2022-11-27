@@ -1,0 +1,14 @@
+[package]
+name = "my_nannou"
+version = "0.1.0"
+description = "my nannou playground"
+edition = "2021"
+authors = ["i3oc9i <ivano.coltellacci@gmail.com>"]
+
+[dependencies]
+nannou ="0.18.1"
+
+# 01_basic
+[[example]]
+name = "np_01_01_play"
+path = "01_basic/01_play.rs"

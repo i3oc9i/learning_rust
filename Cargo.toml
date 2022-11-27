@@ -1,0 +1,10 @@
+[workspace]
+
+members = [
+    "book_nature_of_code",
+    "book_generative_design",
+    "my_nannou",
+    "my_learning",
+]
+
+resolver = "2"
