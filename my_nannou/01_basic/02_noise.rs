@@ -3,15 +3,17 @@ use nannou::prelude::*;
 use nannou::noise::*;
 
 fn main() {
-    nannou::app(model).update(update).run();
+    nannou::app(model)
+        .update(update)
+        .run();
 }
 
 struct Thing {
-    positions: Vec<Vector2>,
+    positions: Vec<Vec2>,
 }
 
 impl Thing {
-    pub fn new(p:Vector2) -> Self {
+    pub fn new(p:Vec2) -> Self {
         let mut positions = Vec::new();
         positions.push(p);
         Thing {
@@ -71,18 +73,15 @@ fn update(app: &App, model: &mut Model, _update: Update) {
 fn view(app: &App, model: &Model, frame: Frame) {
     let draw = app.draw();
 
-    let time = app.elapsed_frames() as f32 / 60.0;
-
     if app.elapsed_frames()==1 {
         draw.background().color(BLACK);
     }
+    
     draw.rect().w_h(1024.0,1024.0).color(srgba(0.0,0.0,0.0,0.1));
 
     for thing in model.things.iter() {
         draw.polyline().points(thing.positions.iter().cloned()).color(WHITE);
     }
-
-
 
     draw.to_frame(app, &frame).unwrap();
 }

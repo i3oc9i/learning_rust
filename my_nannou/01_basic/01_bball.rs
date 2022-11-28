@@ -3,7 +3,6 @@ use nannou::prelude::*;
 fn main() {
     nannou::app(model)
         .update(update)
-        .simple_window(view)
         .run();
 }
 
@@ -14,7 +13,10 @@ struct Model {
     y_speed: f32,
 }
 
-fn model(_: &App) -> Model {
+fn model(app: &App) -> Model {
+
+    let _window = app.new_window().size(512,512).view(view).build().unwrap();
+
     let x = 100.0;
     let y = 100.0;
     let x_speed = 2.5;
@@ -44,6 +46,7 @@ fn update(app: &App, model: &mut Model, _update: Update) {
 
 fn view(app: &App, model: &Model, frame: Frame) {
     let draw = app.draw();
+
     draw.background().color(ORANGE);
 
     draw.ellipse()
