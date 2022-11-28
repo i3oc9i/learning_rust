@@ -10,5 +10,9 @@ nannou ="0.18.1"
 
 # 01_basic
 [[example]]
-name = "np_01_01_play"
-path = "01_basic/01_play.rs"
+name = "np_01_01_bball"
+path = "01_basic/01_bball.rs"
+
+[[example]]
+name = "np_01_02_noise"
+path = "01_basic/02_noise.rs"
