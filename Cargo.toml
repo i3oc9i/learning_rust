@@ -1,8 +1,9 @@
 [workspace]
 
 members = [
-    "book_nature_of_code",
-    "book_generative_design",
+    "the_nature_of_code_book",
+    "the_generative_design_book",
+    "the_rust_book",
     "my_nannou",
     "my_learning",
 ]
